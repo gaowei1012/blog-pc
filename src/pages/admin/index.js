@@ -20,7 +20,7 @@ export default class Admin extends React.Component {
                                 <NavLeft />
                             </Col>
                             <Col span={21}>
-                                <Route path='/admin/welcome' component={Welcome} />
+                                <Route exact path='/admin/welcome' component={Welcome} />
                                 <Route path='/admin/category' component={ Category } />
                                 <Route path='/admin/article' component={ Article } />
                             </Col>

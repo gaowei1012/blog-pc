@@ -12,7 +12,7 @@ import Register from './pages/register';
  * 此项目先使用session维护， 后期会改成token 使用 jwt 改
  */
 history.listen(location => {
-    if (location.pathname == '/admin' & !sessionStorage.getItem('username')) {
+    if (location.pathname === '/admin' & !sessionStorage.getItem('username')) {
         history.push('/')
     }
 })

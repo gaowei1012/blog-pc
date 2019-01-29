@@ -1,4 +1,4 @@
-import { get, post, put, del } from './axios';
+import { get, post } from './axios';
 
 /**
  * 注册

@@ -9,7 +9,7 @@ export default class Register extends React.Component {
         // console.log(value)
         server.signup(value).then(res => {
             // console.log(res)
-            if (res.code ==0) {
+            if (res.code === 0) {
                 message.success('注册成功!')
                 setTimeout(() => {
                     this.props.history.push('/')
@@ -53,11 +53,11 @@ class RegisterForm extends React.Component {
         return(
             <Form onSubmit={this.registerSubmit} >
                 <Form.Item>
-                {getFieldDecorator('username', {
-                    rules: [{validator: this.checkUserName}]
-                })(
-                    <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
-                )}
+                    {getFieldDecorator('username', {
+                        rules: [{validator: this.checkUserName}]
+                    })(
+                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
+                    )}
                 </Form.Item>
                 <Form.Item>
                 {getFieldDecorator('password', {

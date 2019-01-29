@@ -10,7 +10,7 @@ export default class Login extends React.Component {
     
     handleSubmit = (value) => {
         service.signin(value).then(res => {
-            if (res.code == 0) {
+            if (res.code === 0) {
                 // 登录成功, 跳转到
                 message.success('登录成功',1);
                 // 将用户名存在sessionStore里面
@@ -19,7 +19,7 @@ export default class Login extends React.Component {
                 setTimeout(() => {
                     this.props.history.push('/admin')
                 }, 1000);
-            } else if(res.code == 1){
+            } else if(res.code === 1){
                 // 登录失败
                 message.error('用户名或密码错误');
             }

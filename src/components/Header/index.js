@@ -17,7 +17,7 @@ class Header extends React.Component {
 
     loginClean = () => {
         service.signout().then(res => {
-            if (res.code == 0) {
+            if (res.code === 0) {
                 sessionStorage.removeItem('username')
                 message.success('退出成功')
                 setTimeout(() => {

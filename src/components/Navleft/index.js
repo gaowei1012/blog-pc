@@ -11,7 +11,7 @@ export default class NavLeft extends React.Component {
                 <Menu
                     mode='inline'
                     theme='light'
-                    defaultSelectedKeys={['/admin/welcome']}
+                    defaultSelectedKeys={['/admin/']}
 
                 >
                     <Menu.Item key='/admin'>
